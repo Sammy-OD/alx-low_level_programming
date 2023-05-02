@@ -6,16 +6,15 @@
  *
  * Return: the number of nodes
  */
-size_t print_listint(const listint_t* h)
+size_t print_listint(const listint_t *h)
 {
-  struct listint_t* current = h;
 	size_t num = 0;
 
-	while (current)
+	while (h)
 	{
-		printf("%d\n", current->n);
+		printf("%d\n", h->n);
 		num++;
-		current = current->next;
+		h = h->next;
 	}
 
 	return (num);
